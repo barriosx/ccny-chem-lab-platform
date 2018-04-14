@@ -1,33 +1,33 @@
 <div id="wrapper">
-  <div class="topbar">
-      <app-navbar></app-navbar>
-  </div>
-  <!-- sidebar -->
-  <div id="sidebar">
-    <nav class="bg-faded nav flex-md-column sidebar">
-      <li class="nav-item">
-        <a class="nav-link active" [routerLink]="['home']">Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['lab-inspections']">Lab Inspections</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['pickup-requests']">Pick Up Requests</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" [routerLink]="['users']">Users</a>
-      </li>
-    </nav>
-  </div>
-  <!-- main view -->
-  <div id="main-view">
-    <div class="container-fluid mt-2">
-      <div class="row">
-        <div class="col-12">
-          <!-- Router outlet that will render its child routes -->
-          <router-outlet></router-outlet>
-        </div>
-      </div>
+    <div class="topbar">
+        <app-navbar></app-navbar>
     </div>
-  </div>
+    <!-- sidebar -->
+    <div id="sidebar">
+        <nav class="bg-faded nav flex-md-column sidebar">
+            <li class="nav-item">
+                <a class="nav-link active" [routerLink]="['home']">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['lab-inspections']">Lab Inspections</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['pickup-requests']">Pick Up Requests</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" [routerLink]="['users']">Users</a>
+            </li>
+        </nav>
+    </div>
+    <!-- main view -->
+    <div id="main-view">
+        <div class="container-fluid mt-2">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Router outlet that will render its child routes -->
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

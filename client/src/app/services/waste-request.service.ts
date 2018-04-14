@@ -6,6 +6,22 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class WasteRequestService {
+    domain = "http://localhost:3000";
+    constructor(private http: HttpClient) {
+    }
+  
 
-  constructor() { }
+    getRequests(): Promise<any>{
+      let promise = new Promise((resolve,reject) => {
+        this.http.get(this.domain + '/schedule').toPromise()
+        .then(
+          res => { // Success
+            resolve(res);
+        },
+        msg => { // Error
+          reject(msg);
+        });
+      });
+      return promise;
+    }
 }
